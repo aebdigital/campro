@@ -35,14 +35,14 @@ export default function SiteHeader() {
   }, [isHome, mobileOpen]);
 
   const containerClass = scrolled
-    ? "bg-white/95 shadow-[0_2px_20px_rgba(0,0,0,0.1)] backdrop-blur"
+    ? "bg-white/60 shadow-[0_2px_20px_rgba(0,0,0,0.08)] backdrop-blur-md"
     : "bg-transparent";
 
   const linkClass = scrolled ? "text-slate-900" : "text-white";
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${containerClass}`}>
-      <div className="mx-auto flex w-[95%] max-w-[1400px] items-center justify-between px-5 py-3 lg:py-4">
+      <div className="mx-auto flex w-[95%] max-w-[1400px] items-center justify-between px-5 py-1.5 lg:py-2">
         <Link href="/" className="flex items-center" aria-label="Campro domov">
           <img src="/logo.png" alt="Campro Logo" className="h-14 w-auto lg:h-20" />
         </Link>
