@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
+import ScrollAnimator from "@/components/scroll-animator";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import "./globals.css";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="sk" className={montserrat.variable}>
       <body className="page-load-animate bg-white text-slate-900 antialiased">
+        <ScrollAnimator />
         <SiteHeader />
         {children}
         <SiteFooter />

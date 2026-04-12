@@ -30,15 +30,9 @@ body {
   }
 }
 
+/* ── Page-load animation: header + hero text only ── */
 body.page-load-animate header,
-body.page-load-animate main > *,
-body.page-load-animate main > * > div:not(.absolute),
-body.page-load-animate main > * > div:not(.absolute) > *,
-body.page-load-animate main article,
-body.page-load-animate main li,
-body.page-load-animate main form,
-body.page-load-animate footer > *,
-body.page-load-animate footer > * > * {
+body.page-load-animate .hero-content {
   opacity: 0;
   transform: translate3d(0, 28px, 0);
   animation: fade-in-up 0.82s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -49,34 +43,26 @@ body.page-load-animate header {
   animation-delay: 0.04s;
 }
 
-body.page-load-animate main > *:nth-child(1) {
-  animation-delay: 0.1s;
+body.page-load-animate .hero-content {
+  animation-delay: 0.14s;
 }
 
-body.page-load-animate main > *:nth-child(2) {
-  animation-delay: 0.18s;
+/* ── Scroll-reveal: elements fade-up individually as they enter view ── */
+.scroll-hidden {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
 }
 
-body.page-load-animate main > *:nth-child(3) {
-  animation-delay: 0.26s;
+.scroll-hidden.scroll-visible {
+  animation: fade-in-up 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
 }
 
-body.page-load-animate main > *:nth-child(4) {
-  animation-delay: 0.34s;
-}
-
-body.page-load-animate main > *:nth-child(5) {
-  animation-delay: 0.42s;
-}
-
-body.page-load-animate main > * > div:not(.absolute),
-body.page-load-animate main > * > div:not(.absolute) > *,
-body.page-load-animate main article,
-body.page-load-animate main li,
-body.page-load-animate main form,
-body.page-load-animate footer > *,
-body.page-load-animate footer > * > * {
-  animation-delay: 0.18s;
+/* ── Sections stack on top of the sticky hero ── */
+main > section:not(:first-child),
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -85,14 +71,8 @@ body.page-load-animate footer > * > * {
   }
 
   body.page-load-animate header,
-  body.page-load-animate main > *,
-  body.page-load-animate main > * > div:not(.absolute),
-  body.page-load-animate main > * > div:not(.absolute) > *,
-  body.page-load-animate main article,
-  body.page-load-animate main li,
-  body.page-load-animate main form,
-  body.page-load-animate footer > *,
-  body.page-load-animate footer > * > * {
+  body.page-load-animate .hero-content,
+  .scroll-hidden {
     opacity: 1;
     transform: none;
     animation: none;
