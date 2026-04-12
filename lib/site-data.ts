@@ -398,7 +398,7 @@ export const SERVICE_PAGES: Record<string, ServicePageContent> = {
     ],
     photos: [
       {
-        src: "/sources/solar/475549677_629607646420490_4057491464821260782_n.jpg",
+        src: "/sources/fotovoltaika-1024x683-1.jpg",
         alt: "Inštalácia solárnych panelov na streche - fotovoltaický projekt Campro",
       },
       {

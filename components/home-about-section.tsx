@@ -39,7 +39,7 @@ export default function HomeAboutSection() {
 
           <div className="lg:sticky lg:top-28">
             <img
-              src="/sources/solar/475549677_629607646420490_4057491464821260782_n.jpg"
+              src="/sources/solar/476031584_630667696314485_8185073002251379346_n.jpg"
               alt="Fotovoltaický projekt Campro - inštalácia solárnych panelov na strehe rodinného domu"
               className="h-[420px] w-full rounded-2xl object-cover shadow-xl"
             />
