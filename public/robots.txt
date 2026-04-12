@@ -1,15 +1,5 @@
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://campro.sk/sitemap.xml
-
-# Disallow files that shouldn't be indexed
 Disallow: /sources/
-Disallow: /*.css$
-Disallow: /*.js$
 
-# Allow specific important directories
-Allow: /partneri-images/
-Allow: /favicon.jpg
-Allow: /logo.png
+Sitemap: https://campro.sk/sitemap.xml
