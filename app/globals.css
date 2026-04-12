@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+body.page-load-animate header,
+body.page-load-animate main > *,
+body.page-load-animate main > * > div:not(.absolute),
+body.page-load-animate main > * > div:not(.absolute) > *,
+body.page-load-animate main article,
+body.page-load-animate main li,
+body.page-load-animate main form,
+body.page-load-animate footer > *,
+body.page-load-animate footer > * > * {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  animation: fade-in-up 0.82s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, transform;
+}
+
+body.page-load-animate header {
+  animation-delay: 0.04s;
+}
+
+body.page-load-animate main > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+body.page-load-animate main > *:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+body.page-load-animate main > *:nth-child(3) {
+  animation-delay: 0.26s;
+}
+
+body.page-load-animate main > *:nth-child(4) {
+  animation-delay: 0.34s;
+}
+
+body.page-load-animate main > *:nth-child(5) {
+  animation-delay: 0.42s;
+}
+
+body.page-load-animate main > * > div:not(.absolute),
+body.page-load-animate main > * > div:not(.absolute) > *,
+body.page-load-animate main article,
+body.page-load-animate main li,
+body.page-load-animate main form,
+body.page-load-animate footer > *,
+body.page-load-animate footer > * > * {
+  animation-delay: 0.18s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body.page-load-animate header,
+  body.page-load-animate main > *,
+  body.page-load-animate main > * > div:not(.absolute),
+  body.page-load-animate main > * > div:not(.absolute) > *,
+  body.page-load-animate main article,
+  body.page-load-animate main li,
+  body.page-load-animate main form,
+  body.page-load-animate footer > *,
+  body.page-load-animate footer > * > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
