@@ -246,10 +246,6 @@ export const HOME_HERO_IMAGES: HeroImage[] = [
     alt: "Kvalitné stavebné riešenia pre domácnosti a firmy v Trnave",
   },
   {
-    src: "/sources/iStock-538176518-1536x1024-1.jpg",
-    alt: "Fotovoltaické systémy a solárne panely inštalácia",
-  },
-  {
     src: "/sources/a2f5f84c6265d55514d90d43048a27ef.jpg",
     alt: "Moderné interiérové stavebné práce a sadrokartón",
   },
